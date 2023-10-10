@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Badge from './badge';
 
 interface CardFeaturedWorkProps {
   href: string;
@@ -24,9 +25,7 @@ const CardFeaturedWork = ({
           className='object-cover rounded-xl group-hover:scale-110 transition-all duration-300'
         />
       </div>
-      <h5 className='text-gray-500 uppercase tracking-widest font-medium'>
-        {category}
-      </h5>
+      <Badge label={category} />
       <h3 className='text-xl text-white group-hover:text-primary transition-colors duration-300'>
         {title}
       </h3>
